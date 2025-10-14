@@ -1,0 +1,57 @@
+Linux Programming: Assignment-6
+1. Which command is used to list the contents of a directory? Justify with proper
+example.
+Answer:
+Ls
+Example:
+ls /home/user
+2. Write the command to create a new directory named 123test_dir.
+Answer:
+mkdir 123test_dir
+3. What is the purpose of the Sed command? Justify with proper example.
+Answer:
+Sed (stream editor) is used to perform text transformations like substitution.
+Example:
+Sed 's/Linux/Ubuntu/g' file.txt
+4. Which distinct command is used to display one-line descriptions of any
+commands?
+Answer:
+whatis command_name
+Example:
+whatis grep
+5. Write the command to create an empty file named “notes.txt”.
+Answer:
+touch notes.txt
+6. Differentiate between grep and awk commands with an example.
+Answer:
+grep: Searches for matching patterns.
+grep "error" log.txt
+awk: A text processing tool for pattern scanning and data extraction.
+awk '{print $1, $3}' data.txt
+7. Write the command to give read, write, and execute permission to the owner
+of a file script.sh.
+Answer:
+chmod u+rwx script.sh
+8. How is chown different from chgrp? Give one example for each.
+Answer:
+chown: Changes file owner.
+chown user1 file.txt
+chgrp: Changes group ownership.
+chgrp staff file.txt
+9. A user complains that they cannot execute a file even though it exists in their
+directory. How would you troubleshoot this using ls -l, chmod, and whoami?
+Answer:
+Use ls -l file.sh to check permissions.
+If execute bit (x) is missing, give permission:
+chmod +x file.sh
+Check who owns the file:
+Whoami
+10.Design a command pipeline to: find all .log files modified in the last 2 days in /
+var/log, display them on screen, and save the results into a file recent_logs.txt
+using tee command.
+Answer:
+find /var/log -name "*.log" -mtime -2 | tee recent_logs.txt
+NAME: RN YOGIRAJ
+USN NO: ENG24CY0146
+ROLLNO:24
+SECTION:3A
