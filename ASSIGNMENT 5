@@ -1,0 +1,65 @@
+Linux Programming: Assignment-5
+What is a shell in Linux OS? How many categories of shell is currently exists
+in Linux? Why bash shell is very popular in Linux distribution?
+Answer: Shell is a software that acts as an interface between user and kernel
+for Linux. It reads the user's instructions and runs them.
+The Linux shells fall into two main categories:
+command-line shells like Bash, Zsh, T
+Graphical shells (e.g., GNOME Shell, Plasma Shell from KDE) The Bash
+(Bourne Again Shell) is most familiar because it offers command history,
+scripting, aliases, tab completion, and portability between distributions.
+2. What does the ls -Z command display?
+Answer: The ls -Z command displays SELinux security context information for
+files and directories, including user, role, type, and level.
+Example:
+ls -Z /home/user
+3. Write a command to list all hidden files in the current directory.
+Answer:
+ls -a
+4. Explain the difference between hard links and soft links (symbolic links) in
+Linux.
+Answer:
+Hard Link: It simply references the inode of the file. Deletion of the original file
+doesn't affect the hard link.
+Soft Link (Symbolic Link): It is another form of shortcut, a reference to the file
+name. If the original file is removed, then the link is lost.
+Example:
+ln file1.txt file2.txt # Hard link
+ln -s file1.txt link.txt # Soft link
+5. Answer:
+• Owner: Can read, write, and execute.
+• Group: Can read and execute.
+• Others: Can only execute.
+A file has permissions -rwxr-x--x. Explain who can read, write, and execute it.
+6. Write the command to change the group ownership of a file data.txt to group
+staff.
+Answer:
+chgrp staff data.txt
+7. Why is it dangerous to give 777 permissions to a file? Explain with an
+example.
+Answer: 777 means everyone (owner, group, others) can read, write, and
+execute the file.
+This is risky because anyone can modify or delete the file.
+Example:
+chmod 777 system.sh # Not recommended for sensitive files
+8. What is the difference between apropos (i.e., man -k) and whatis (i.e., man
+-f)?
+Answer:
+whatis: Shows a one-line description of a command.
+apropos: Searches command descriptions for a keyword.
+Example:
+whatis ls
+apropos copy
+9. Write a command to redirect the error output of a command to a file named
+error.log.
+Answer:
+command_name 2> error.log
+10.How can you use the tee command to append output to a file instead of
+overwriting it?
+Answer:
+command_name | tee -a output.txt
+
+NAME: RN YOGIRAJ
+USN NO: ENG24CY0146
+ROLLNO:24
+SECTION:3A
