@@ -1,0 +1,65 @@
+Linux Programming: Assignment-7
+1. What is a bash shell script? Give one example.
+Answer: A bash shell script is an ordinary text file with a list of commands for the
+Bash shell. It is used to automate repeated work and run multiple Linux
+commands in sequence.
+Example:
+echo "This is a simple bash script."
+2. Write a simple shell script to print “Hello World”.
+Answer:
+echo "Hello World"
+3. What is the purpose of comments (#) in a shell script?
+Answer:
+Comments are used to explain code and make scripts more readable.
+In Bash, any line starting with # is ignored during execution.
+Example:
+echo "Hello World"
+4. How do you declare variables (int, float, double, string, Boolean, and char in a
+shell script?
+Answer:
+Variables in bash do not need explicit type declarations.
+Examples
+int=10
+float=10.5
+double=20.55
+string="Hello"
+Boolean=true
+char='A'
+5. Write a shell script to display the current date and time of the system.
+Answer:
+echo "Current Date and Time: $(date)"
+6. Explain the difference between a constant and a variable in bash script.
+Answer:
+• Variable: Its value can change during execution.
+• Constant: Its value remains fixed.
+Example:
+readonly PI=3.14 # constant
+radius=5 # variable
+7. Write a shell script to read two integer number from the user and compute the
+sum of both the number.
+Answer:
+read -p "Enter first number: " a
+read -p "Enter second number: " b
+sum=$((a + b))
+echo "Sum = $sum"
+8. What is the use of source command in shell scripting?
+Answer: The source command executes commands from a file in the current
+shell environment without starting a new shell.
+Example:
+source myscript.sh
+9. How can you debug a shell script? Give two methods.
+Answer:
+Two methods:
+1. Run with -x option:
+bash -x script.sh
+2.Add set -x inside script for step-by-step debugging.
+10. Write a bash script to create and delete a file.
+Answer:
+touch myfile.txt
+echo "File created."
+rm myfile.txt
+echo "File deleted."
+NAME: RN YOGIRAJ
+USN NO: ENG24CY0146
+ROLLNO:24
+SECTION:3A
