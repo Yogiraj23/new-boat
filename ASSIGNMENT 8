@@ -1,0 +1,66 @@
+Linux Programming: Assignment-8
+1. What is a user-defined function in shell scripting? Explain with an example.
+Answer: A function is a block of reusable code defined by the user.
+Example:
+my_function () {
+echo "This is a function"
+}
+my_function
+2. Answer:
+multiply () {
+result=$(($1 * $2))
+echo "Product: $result"
+Write a bash script with a function that multiply two integer numbers.
+}
+multiply 5 10
+3. Answer:
+# 1D array
+arr= (10 20 30)
+Explain how arrays (1D, 2D, and 3D) are declared in bash scripting.
+# 2D array (using nested arrays or indexing)
+arr2D [0,0] =1
+arr2D [0,1] =2
+# 3D array (simulated using associative arrays)
+declare -A arr3D
+arr3D [0,0,0] =5
+4. Write a shell script to display elements of an array.
+Answer:
+arr= (10 20 30 40)
+for I in "${arr [@]}"
+do
+echo $i
+done
+5. What is the purpose of cron in Linux?
+Answer:
+Cron is a job scheduler used to execute commands or scripts automatically at
+specified intervals.
+6. Write a cron job to run a backup script every day at midnight.
+Answer:
+0 0 * * * /home/user/backup.sh
+7. How do you schedule a one-time job using at command?
+Answer:
+at 10:00 PM
+bash /home/user/task.sh
+Ctrl + D
+8. Write a script to display disk usage using df and du.
+Answer:
+echo "Disk Free Space:"
+df -h
+echo "Disk Usage by Directory:"
+du -sh *
+9. How can you log the output of a script using the tee command?
+Answer:
+echo "Logging system status..." | tee log.txt
+df -h | tee -a log.txt
+10.Explain with an example how shell scripting can automate system
+administration tasks.
+Answer:
+Shell scripts can automate repetitive admin tasks such as backups, monitoring,
+and cleanup.
+Example:
+tar -czf backup_$(date +%F). tar.gz /home/user/data
+echo "Backup completed successfully!"
+NAME: RN YOGIRAJ
+USN NO: ENG24CY0146
+ROLLNO:24
+SECTION:3A
